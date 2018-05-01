@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +21,115 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzF-pm-unE">
+                                <rect key="frame" x="36" y="108" width="303" height="66.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TicToc Example  ">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Perform a background activity">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="qDy-Pe-iQl">
+                                <rect key="frame" x="20" y="194.5" width="335" height="272"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cW-Ex-lJt">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="126"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7B-Pq-VQf">
+                                                <rect key="frame" x="107.5" y="20" width="120" height="44"/>
+                                                <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="OVp-OZ-h0q"/>
+                                                    <constraint firstAttribute="width" constant="120" id="R19-cT-rm5"/>
+                                                </constraints>
+                                                <state key="normal" title="Start Operation"/>
+                                                <connections>
+                                                    <action selector="startBackgroundOperation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="v91-kR-1ze"/>
+                                                </connections>
+                                            </button>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9L8-2d-jYc">
+                                                <rect key="frame" x="28" y="84" width="279" height="2"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="oI2-Sp-IcF"/>
+                                                </constraints>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSd-He-SYu">
+                                                <rect key="frame" x="28" y="106" width="279" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="e7B-Pq-VQf" firstAttribute="centerX" secondItem="2cW-Ex-lJt" secondAttribute="centerX" id="62r-v9-Ve6"/>
+                                            <constraint firstItem="e7B-Pq-VQf" firstAttribute="top" secondItem="2cW-Ex-lJt" secondAttribute="top" constant="20" id="6hh-br-Qvg"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="aSd-He-SYu" secondAttribute="trailing" constant="20" id="ANg-Uv-oMy"/>
+                                            <constraint firstItem="9L8-2d-jYc" firstAttribute="leading" secondItem="2cW-Ex-lJt" secondAttribute="leadingMargin" constant="20" id="Dvv-eA-fFU"/>
+                                            <constraint firstItem="9L8-2d-jYc" firstAttribute="top" secondItem="e7B-Pq-VQf" secondAttribute="bottom" constant="20" id="IQx-t9-l9H"/>
+                                            <constraint firstAttribute="bottom" secondItem="aSd-He-SYu" secondAttribute="bottom" constant="20" id="MLx-5e-ldO"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="9L8-2d-jYc" secondAttribute="trailing" constant="20" id="Ntx-42-9eM"/>
+                                            <constraint firstItem="aSd-He-SYu" firstAttribute="leading" secondItem="2cW-Ex-lJt" secondAttribute="leadingMargin" constant="20" id="c6L-ff-hKK"/>
+                                            <constraint firstItem="aSd-He-SYu" firstAttribute="top" secondItem="9L8-2d-jYc" secondAttribute="bottom" constant="20" id="wYF-J7-dkE"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfZ-uP-86d">
+                                        <rect key="frame" x="62.5" y="155" width="210" height="44"/>
+                                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="5xu-7L-YQF"/>
+                                            <constraint firstAttribute="width" constant="210" id="q9k-3x-0sl"/>
+                                        </constraints>
+                                        <state key="normal" title="Measure Sync Execution"/>
+                                        <connections>
+                                            <action selector="measureClosure:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rhx-tW-QYv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKQ-vd-N9M">
+                                        <rect key="frame" x="62.5" y="228" width="210" height="44"/>
+                                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="lxg-mL-vQi"/>
+                                            <constraint firstAttribute="width" constant="210" id="ux0-gf-2Kt"/>
+                                        </constraints>
+                                        <state key="normal" title="Measure Async Execution"/>
+                                        <connections>
+                                            <action selector="measureClosureWithCompletion:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jZU-tl-807"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2cW-Ex-lJt" firstAttribute="leading" secondItem="qDy-Pe-iQl" secondAttribute="leading" id="TNY-4W-Xuf"/>
+                                    <constraint firstAttribute="trailing" secondItem="2cW-Ex-lJt" secondAttribute="trailing" id="ipi-JN-v9C"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GzF-pm-unE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="186-2q-WW5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GzF-pm-unE" secondAttribute="trailing" constant="20" id="BYQ-um-MH0"/>
+                            <constraint firstItem="GzF-pm-unE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="88" id="Fs1-dC-2x7"/>
+                            <constraint firstAttribute="trailing" secondItem="qDy-Pe-iQl" secondAttribute="trailing" constant="20" id="QOX-B6-6ur"/>
+                            <constraint firstItem="qDy-Pe-iQl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="b4L-V0-jLb"/>
+                            <constraint firstItem="qDy-Pe-iQl" firstAttribute="top" secondItem="GzF-pm-unE" secondAttribute="bottom" constant="20" id="dzn-i3-sPr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundOperationButton" destination="e7B-Pq-VQf" id="Afl-AH-fSp"/>
+                        <outlet property="progressView" destination="9L8-2d-jYc" id="DDB-R6-1JQ"/>
+                        <outlet property="resultLabel" destination="aSd-He-SYu" id="5eK-Bo-XQ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

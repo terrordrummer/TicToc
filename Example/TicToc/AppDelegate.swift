@@ -2,11 +2,12 @@
 //  AppDelegate.swift
 //  TicToc
 //
-//  Created by terrordrummer on 05/01/2018.
+//  Created by terrordrummer on 04/23/2018.
 //  Copyright (c) 2018 terrordrummer. All rights reserved.
 //
 
 import UIKit
+import TicToc
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
