@@ -52,12 +52,12 @@ class ViewController: UIViewController {
         TicToc.measure(label: "operation executed in") {
             performOperations()
         }
-        NSLog("operation done")
+        NSLog("measurement done")
         showCompletedAlert()
     }
     
     @IBAction func measureClosureWithCompletion(_ sender: UIButton) {
-        TicToc.measure(label: "async operation") { (completion) in
+        TicToc.measure(label: "executed executed in") { (completion) in
             // operation is executed asynchronously and completion is called at the end
             DispatchQueue.main.async {
                 self.performOperations()
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
                 self.showCompletedAlert()
             }
         }
-        NSLog("operation started")
+        NSLog("measurement started")
     }
     // MARK: - Private
     private func initUI() {
@@ -99,7 +99,7 @@ class ViewController: UIViewController {
         activityIndicator.removeFromSuperview()
         backgroundOperationButton.isEnabled = true
         
-        resultLabel.text = String(format: "Operation completed in %.3f sec", tictoc.toc())
+        resultLabel.text = String(format: "Operation executed in %.3f sec", tictoc.toc())
     }
     
     private func performOperations() {

@@ -13,4 +13,3 @@
 
 FOUNDATION_EXPORT double TicTocVersionNumber;
 FOUNDATION_EXPORT const unsigned char TicTocVersionString[];
-

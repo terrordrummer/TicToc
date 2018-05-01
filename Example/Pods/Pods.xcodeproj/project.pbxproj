@@ -13,7 +13,7 @@
 		34E64149B7B412D041D74107B5C1932F /* Pods-TicToc_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB59A362DE390B5D7595BCC2C3276FD9 /* Pods-TicToc_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		457B469B02BE1D84C179B3AA513420E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		4E5140EA8DA0544C7DFC1198CF4E88D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		811A2EF7975D20BAED121E18BA1AB10F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B580D869EA575B8FC2CA77D09ED5792 /* ReplaceMe.swift */; };
+		9A05C13D209896E800515CA9 /* TicToc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05C13C209896E800515CA9 /* TicToc.swift */; };
 		D3CBDA1B71B3212EB9A8FDA4B1B49A35 /* TicToc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BF74C42B57B1DEA40F9398B3ABB7E82 /* TicToc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD35240ED3E7ADAC493D3C09F782DE49 /* Pods-TicToc_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711B722394C21913A52F180545DF436 /* Pods-TicToc_Example-dummy.m */; };
 		E6D23483538E856DE5397A6CAF2AED80 /* Pods-TicToc_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655CB6797920AC9378F483D3292A1D8 /* Pods-TicToc_Tests-dummy.m */; };
@@ -31,11 +31,10 @@
 
 /* Begin PBXFileReference section */
 		0711B722394C21913A52F180545DF436 /* Pods-TicToc_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TicToc_Example-dummy.m"; sourceTree = "<group>"; };
-		0D689FFA6BAC5860E717437BAD9F4F28 /* Pods-TicToc_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TicToc_Example.modulemap"; sourceTree = "<group>"; };
-		2B580D869EA575B8FC2CA77D09ED5792 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		0D689FFA6BAC5860E717437BAD9F4F28 /* Pods-TicToc_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TicToc_Example.modulemap"; sourceTree = "<group>"; };
 		31611025243E2F9418AB3A63671857D7 /* Pods-TicToc_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TicToc_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		343A92FE445373041CFD63D30E7ADA67 /* Pods_TicToc_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TicToc_Example.framework; path = "Pods-TicToc_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		36F9D79260F75CB0338B56BD986CB87B /* TicToc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TicToc.framework; path = TicToc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		343A92FE445373041CFD63D30E7ADA67 /* Pods_TicToc_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicToc_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36F9D79260F75CB0338B56BD986CB87B /* TicToc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TicToc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B0D68E9BAB408CEC7DD557C415F084 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BF74C42B57B1DEA40F9398B3ABB7E82 /* TicToc-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TicToc-umbrella.h"; sourceTree = "<group>"; };
 		53EB972734FC6A1CF491487AAFA029CC /* Pods-TicToc_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TicToc_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -44,17 +43,18 @@
 		60BECB738585B7985CE64510E841F175 /* Pods-TicToc_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TicToc_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		651757F79720D7B690DD6D0B715F348A /* Pods-TicToc_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TicToc_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		680BD75EC7AE3B3832028FC78CF2F486 /* Pods-TicToc_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TicToc_Tests.modulemap"; sourceTree = "<group>"; };
-		7584B5F60BCC3A661D615E1478FC4E0B /* Pods_TicToc_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TicToc_Tests.framework; path = "Pods-TicToc_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		680BD75EC7AE3B3832028FC78CF2F486 /* Pods-TicToc_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TicToc_Tests.modulemap"; sourceTree = "<group>"; };
+		7584B5F60BCC3A661D615E1478FC4E0B /* Pods_TicToc_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicToc_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E73E57D1B2AEC5F7F49E2942E8A1351 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88CD8818917BB591A564DCF94B5B7943 /* TicToc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TicToc.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9655CB6797920AC9378F483D3292A1D8 /* Pods-TicToc_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TicToc_Tests-dummy.m"; sourceTree = "<group>"; };
+		9A05C13C209896E800515CA9 /* TicToc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicToc.swift; sourceTree = "<group>"; };
 		AB59A362DE390B5D7595BCC2C3276FD9 /* Pods-TicToc_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TicToc_Example-umbrella.h"; sourceTree = "<group>"; };
 		B5C1CCE6253467921048949D7F20E1FA /* Pods-TicToc_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TicToc_Tests-resources.sh"; sourceTree = "<group>"; };
 		BCB0628994338C48B85A91A0274AB3CF /* TicToc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TicToc-dummy.m"; sourceTree = "<group>"; };
 		C28811528345D172BE0BEC8CC4FEAFCA /* Pods-TicToc_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TicToc_Example-frameworks.sh"; sourceTree = "<group>"; };
-		CB55A5DDF4CE7D9220C5AFEFA1E60891 /* TicToc.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TicToc.modulemap; sourceTree = "<group>"; };
+		CB55A5DDF4CE7D9220C5AFEFA1E60891 /* TicToc.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TicToc.modulemap; sourceTree = "<group>"; };
 		D3092A5D1B917056FA1C5C93946DDCAB /* Pods-TicToc_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TicToc_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DF1B16AD10BDE48B172830820272C27D /* Pods-TicToc_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TicToc_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E03002A9B64119CD4A57AD0E1772886A /* TicToc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TicToc-prefix.pch"; sourceTree = "<group>"; };
@@ -95,9 +95,8 @@
 		37F520F06A54782A463BFD48940B71A0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2B580D869EA575B8FC2CA77D09ED5792 /* ReplaceMe.swift */,
+				9A05C13C209896E800515CA9 /* TicToc.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -167,7 +166,6 @@
 			children = (
 				37F520F06A54782A463BFD48940B71A0 /* Classes */,
 			);
-			name = TicToc;
 			path = TicToc;
 			sourceTree = "<group>";
 		};
@@ -314,6 +312,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					28DE4FD865F08170808011D90843D433 = {
+						LastSwiftMigration = 0930;
+					};
+					7B9B08E42F6F9CF02BBE8DD5667098C8 = {
+						LastSwiftMigration = 0930;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -347,8 +353,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				811A2EF7975D20BAED121E18BA1AB10F /* ReplaceMe.swift in Sources */,
 				01A77ACB512B7F8E8B55066F7D365323 /* TicToc-dummy.m in Sources */,
+				9A05C13D209896E800515CA9 /* TicToc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 88CD8818917BB591A564DCF94B5B7943 /* TicToc.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -526,6 +533,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D3092A5D1B917056FA1C5C93946DDCAB /* Pods-TicToc_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -565,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 88CD8818917BB591A564DCF94B5B7943 /* TicToc.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -600,6 +609,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D0C8F5E34AF6148C93210B213D00484 /* Pods-TicToc_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

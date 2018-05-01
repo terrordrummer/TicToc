@@ -4,7 +4,7 @@
 //  Created by Roberto Sartori on 23.4.18.
 //
 
-import UIKit
+import Foundation
 
 /// TicToc class
 /// This class implements simple methods to measure elapsed time (e.t.) between two events in
