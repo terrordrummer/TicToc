@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TicToc_Example' do
+  pod 'TicToc', :path => '../'
+
+  target 'TicToc_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
