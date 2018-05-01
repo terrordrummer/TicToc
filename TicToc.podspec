@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TicToc'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of TicToc.'
+  s.summary          = 'Simple time measurement tool.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Simple time measurement tool. Never rely on native timestamps functions to computate elapsed time, this module gives an easy-to-use class to do all that is needed to measure elapsed time within your application.
                        DESC
 
   s.homepage         = 'https://github.com/terrordrummer/TicToc'
